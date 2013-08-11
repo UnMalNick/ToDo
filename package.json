@@ -1,0 +1,12 @@
+{
+	"name": "More-than-a-ToDo",
+	"version": "1.0.0",
+	"dependencies": {
+		"socket.io": "0.9.14",
+		"express": "3.2.4",
+		"swig": "0.13.5",
+		"consolidate": "0.9.1",
+		"node-uuid": "1.4.0",
+		"socket.io-client": "0.9.11"
+	}
+}

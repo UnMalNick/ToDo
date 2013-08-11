@@ -1,0 +1,206 @@
+@import "/stylus/normalize.styl"
+body
+  background  url(/img/bg.png)
+  font-family Trebuchet MS
+  font-size  16px
+  text-align  center
+
+label
+  font-size  2em
+
+h1
+  color  rgba(255, 255, 255, 0.3)
+  font-size  5em
+  font-weight  bold
+  margin  0
+  text-align  center
+  text-rendering  optimizeLegibility
+  text-shadow  -1px -1px rgba(0, 0, 0, 0.2)
+  width  100%
+
+nav
+  background  url(/img/bg.png)
+  bottom  0px
+  box-shadow  0px 0px 1.2em rgba(0,0,0,0.1)
+  left  0px
+  position  fixed
+  width  100%
+
+#user, .user
+  width  15em !important
+
+#submit, .submit
+  display  none
+
+#all, #incomplete, #complete
+  background  white
+  border-radius  0.8em
+  border  1px solid #d2d3d4
+  box-shadow  0px 0px 10px #d2d3d4
+  cursor  pointer
+  display  inline-block
+  font-weight  bold
+  margin  1em 2em 0.8em 2em
+  padding  0.5em 0em
+  vertical-align  middle
+  width  188px
+
+#num
+  background  rgba(255,0,0,1)
+  border-radius  0.4em
+  border  1px solid rgba(255,0,0,1)
+  color  white
+  left  73.5%
+  position  absolute
+  top  65px
+  width  23px
+  z-index  3
+
+#Tasks
+  margin-bottom  55px
+
+#notification
+  -moz-transition  max-height 1s ease
+  -ms-transition  max-height 1s ease
+  -o-transition  max-height 1s ease
+  -webkit-transition  max-height 1s ease
+  background  #dbdbdb
+  border  0px solid rgb(209, 210, 211)
+  box-shadow  rgb(209, 210, 211) 0px 0px 1em
+  left  70%
+  max-height  0px
+  overflow  auto
+  padding  0px
+  position  absolute
+  text-align  left
+  top  85px
+  transition  padding .2s ease
+  width  240px
+  z-index  2
+
+.not
+  color  #898C96
+  padding  0.7em 1em
+  &:hover
+    background  gray
+    color  white
+
+.answer
+  -moz-transition  all .2s ease
+  -ms-transition  all .2s ease
+  -o-transition  all .2s ease
+  -webkit-transition  all .2s ease
+  height  0px
+  overflow  hidden
+  padding  0em 0
+  transition  all .2s ease
+
+.answer-comments
+  -moz-transition  all .2s ease
+  -ms-transition  all .2s ease
+  -o-transition  all .2s ease
+  -webkit-transition  all .2s ease
+  height  0
+  overflow  hidden
+  transition  all .2s ease
+
+.user
+  margin  0 1.4em 0 0
+
+.write
+  cursor  pointer
+  display  inline-block
+  font-size  2em
+  margin-left  14px
+  margin-top  24px
+  padding  0 0.7em 0 0
+  vertical-align  middle
+
+.comments
+  border  1px solid #d1d2d3
+  margin  -1px auto
+  padding  0px 3em
+  text-align  left
+  vertical-align  middle
+  width  450px
+  word-break  break-word
+
+.TaskIncomplete, .TaskComplete
+  padding  1em 0
+
+.TaskComplete .IndTask .Task
+  text-decoration  line-through
+
+.highlight
+  color  green
+  cursor  pointer
+  margin-top  -1px
+  opacity  0.3
+  padding  0.5em
+  text-shadow  0px 0px 7px rgba(0,255,0,0.5)
+  vertical-align  middle
+
+.highlighted .highlight
+  opacity  0.8
+
+.IndTask
+  background  white
+  border-radius  1em
+  border  1px solid #d1d2d3
+  box-shadow  0px 0px 1em rgba(0,0,0,0.2)
+  margin  auto auto 0.8em auto
+  width  735px
+
+.inputext
+  border-radius  0.4em
+  border  1px solid #d1d2d3
+  box-shadow  inset 0px 0px 12px #d1d2d3
+  font-size  1em
+  height  2.5em
+  padding  0 0.3em
+  width  25em
+
+.icon-not
+  border-radius  0.5em
+  border  1px solid #d1d2d3
+  box-shadow  0px 0px 1em #D1D2D3
+  left  70%
+  position  absolute
+  top  22px
+  width  56px
+
+.Task
+  border-left  1px solid #d1d2d3
+  border-right  1px solid #d1d2d3
+  cursor  pointer
+  display  inline-block
+  height  auto
+  padding  0px 3em
+  text-align  left
+  vertical-align  middle
+  width  500px
+  word-break  break-word
+  p
+    margin  0.6em 0 1em 0
+  h3
+    margin  1em 0 0 0
+    text-transform  capitalize
+
+.remove
+  -moz-transition  all .3s ease
+  -ms-transition  all .3s ease
+  -o-transition  all .3s ease
+  -webkit-transition  all .3s ease
+  color  red
+  cursor  pointer
+  margin-left  -1px
+  opacity  0
+  padding  0.5em
+  text-shadow  0px 0px 0.5em rgba(255,0,0,0.8)
+  transition  all .3s ease
+  vertical-align  middle
+
+.IndTask:hover .remove
+  opacity  0.8 !important
+
+

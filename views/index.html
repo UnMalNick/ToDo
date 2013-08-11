@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>ToDo</title>
+
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+		
+		<script type="text/javascript" src="dependencies/jquery-min.js"></script>
+		<script type="text/javascript" src="dependencies/modernizr-min.js"></script>
+		<script type="text/javascript" src="dependencies/neon-min.js"></script>
+		<script type="text/javascript" src="dependencies/CustomEvent-min.js"></script>
+		<script type="text/javascript" src="dependencies/CustomEventSupport-min.js"></script>
+		<script type="text/javascript" src="socket.io/socket.io.js"></script>
+
+		<script type="text/javascript" src="dependencies/underscore-min.js"></script>
+		<script type="text/javascript" src="dependencies/backbone-min.js"></script>
+
+		<script type="text/javascript" src="lib/PonyExpress.js"></script>
+		<script type="text/javascript" src="lib/Plug.js"></script>
+		<script type="text/javascript" src="lib/BackbonePlug.js"></script>
+		
+		<script type="text/javascript" src="js/demo.js"></script>
+
+	</head>
+	<body>
+		<h1>ToDo</h1>
+		<img class="icon-not" src="/img/not.gif"></img><span id="num">0</span>
+		<div id="notification"></div>
+		<div id="Tasks"></div>
+		
+
+		<script type="text/template" id="AddTask">
+			<p class="write"> ✎ </p> 
+			<input class="inputext" id="user" type="text"/>
+			<input class="inputext" id="text"></input>
+			<button id="submit">Enviar</button>
+			<div class="TaskIncomplete"/>
+			<div class="TaskComplete"/>
+		</script>
+		
+
+		<script type="text/template" id="ToDoList-template">
+			<div class="IndTask">
+				<label class="highlight">✓</label>
+				<div class="Task">
+					<h3><%= user %></h3>
+					<p><%= text %></p></div>
+				<label class="remove">✗</label>
+				<div class="answer-comments"></div>
+				<div class="answer">
+					<input class="user inputext" type="text"/>
+					<input class="inputext text"></input>
+					<button class="submit">Enviar</button>
+				</div>
+				</div>
+			</div>
+		</script>
+
+
+		<script type="text/template" id="AddComment">
+			<div class='comments'>
+				<p><%= user %></p>
+				<p><%= text %></p>
+			</div>
+		</script>
+		
+
+
+		<nav>
+			<p id="all">All</p>
+			<p id="complete">Complete</p>
+			<p id="incomplete">Incomplete</p>
+		</nav>
+	</body>
+</html>
